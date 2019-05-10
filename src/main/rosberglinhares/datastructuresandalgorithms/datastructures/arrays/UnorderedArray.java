@@ -27,9 +27,11 @@ package rosberglinhares.datastructuresandalgorithms.datastructures.arrays;
 /**
  * Implements an unordered array.
  *
- * @param <T> the type of elements in this array
+ * @param <T> the type of elements in this array.
  */
 public class UnorderedArray<T> {
+    private static int ELEMENT_NOT_FOUND = -1;
+    
     private T[] elements;
     private int size;
     
@@ -50,6 +52,10 @@ public class UnorderedArray<T> {
     /**
      * Time complexity: O(1)
      * Space complexity: O(1)
+     * 
+     * A new item is always inserted in the first vacant cell in the array, and the algorithm knows this location
+     * because it knows how many items are already in the array. The new item is simply inserted in the next available space.
+     * Searching and deletion, however, are not so fast.
      */
     public void insert(T value) {
         this.elements[this.size++] = value;
@@ -66,31 +72,46 @@ public class UnorderedArray<T> {
     /**
      * Time complexity: O(n)
      * Space complexity: O(1)
+     * 
+     * Executes a linear search.
+     * 
+     * Notice that the search algorithm must look through an average of half the data items to find a specified item.
+     * Items close to the beginning of the array will be found sooner, and those toward the end will be found later.
+     * If N is the number of items, the average number of steps needed to find an item is N/2. In the worst-case scenario,
+     * the specified item is in the last occupied cell, and N steps will be required to find it.
+     * 
+     * @param value the element to be searched.
+     * @return the index of the element found or {@code -1} if the element was not found.
      */
-    public boolean find(T value) {
+    public int search(T value) {
         for (int i = 0; i < this.size; i++) {
             if (this.elements[i].equals(value)) {
-                return true;
+                return i;
             }
         }
         
-        return false;
+        return ELEMENT_NOT_FOUND;
     }
     
     /**
      * Time complexity: O(n)
      * Space complexity: O(1)
+     * 
+     * Implicit in the deletion algorithm is the assumption that holes are not allowed in the array.
+     * A hole is one or more empty cells that have filled cells above them (at higher index numbers).
+     * If holes are allowed, all the algorithms become more complicated because they must check to see whether a cell
+     * is empty before examining its contents. Also, the algorithms become less efficient because they must waste time
+     * looking at unoccupied cells.
+     * A deletion requires searching through an average of N/2 elements and then moving the remaining elements
+     * (an average of N/2 moves) to fill up the resulting hole.
+     * 
+     * @param value element to be removed from this array, if present.
+     * @return {@code true} if this array contained the specified element.
      */
     public boolean delete(T value) {
-        int i;
+        int i = this.search(value);
         
-        for (i = 0; i < this.size; i++) {
-            if (this.elements[i].equals(value)) {
-                break;
-            }
-        }
-        
-        if (i < this.size) {  // Element found
+        if (i > ELEMENT_NOT_FOUND) {
             for (; i < this.size - 1; i++) {
                 this.elements[i] = this.elements[i + 1]; 
             }

@@ -93,13 +93,13 @@ class UnorderedArrayTests {
     }
     
     /**
-     * Test method for {@link rosberglinhares.datastructuresandalgorithms.datastructures.arrays.UnorderedArray#find(java.lang.Object) UnorderedArray.find(T)}.
+     * Test method for {@link rosberglinhares.datastructuresandalgorithms.datastructures.arrays.UnorderedArray#search(java.lang.Object) UnorderedArray.search(T)}.
      */
     @Test
-    void find() {
+    void search() {
         UnorderedArray<Integer> array = new UnorderedArray<Integer>(5);
         
-        assertFalse(array.find(200));
+        assertFalse(array.search(200) >= 0);
         
         array.insert(7);
         array.insert(9);
@@ -107,16 +107,16 @@ class UnorderedArrayTests {
         array.insert(11);
         array.insert(8);
         
-        assertFalse(array.find(15));
-        assertTrue(array.find(3));
-        assertTrue(array.find(7));
-        assertTrue(array.find(8));
+        assertFalse(array.search(15) >= 0);
+        assertTrue(array.search(3) >= 0);
+        assertTrue(array.search(7) >= 0);
+        assertTrue(array.search(8) >= 0);
         
         array.delete(9);
         array.delete(11);
         
-        assertFalse(array.find(9));
-        assertTrue(array.find(3));
+        assertFalse(array.search(9) >= 0);
+        assertTrue(array.search(3) >= 0);
     }
     
     /**
