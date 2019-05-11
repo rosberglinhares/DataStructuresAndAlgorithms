@@ -50,12 +50,12 @@ public class UnorderedArray<T> {
     }
     
     /**
-     * Time complexity: O(1)
-     * Space complexity: O(1)
-     * 
      * A new item is always inserted in the first vacant cell in the array, and the algorithm knows this location
      * because it knows how many items are already in the array. The new item is simply inserted in the next available space.
      * Searching and deletion, however, are not so fast.
+     * 
+     * Time complexity: O(1)
+     * Space complexity: O(1)
      */
     public void insert(T value) {
         this.elements[this.size++] = value;
@@ -70,15 +70,15 @@ public class UnorderedArray<T> {
     }
     
     /**
-     * Time complexity: O(n)
-     * Space complexity: O(1)
-     * 
      * Executes a linear search.
      * 
      * Notice that the search algorithm must look through an average of half the data items to find a specified item.
      * Items close to the beginning of the array will be found sooner, and those toward the end will be found later.
      * If N is the number of items, the average number of steps needed to find an item is N/2. In the worst-case scenario,
      * the specified item is in the last occupied cell, and N steps will be required to find it.
+     * 
+     * Time complexity: O(n)
+     * Space complexity: O(1)
      * 
      * @param value the element to be searched.
      * @return the index of the element found or {@code -1} if the element was not found.
@@ -93,10 +93,7 @@ public class UnorderedArray<T> {
         return ELEMENT_NOT_FOUND;
     }
     
-    /**
-     * Time complexity: O(n)
-     * Space complexity: O(1)
-     * 
+    /** 
      * Implicit in the deletion algorithm is the assumption that holes are not allowed in the array.
      * A hole is one or more empty cells that have filled cells above them (at higher index numbers).
      * If holes are allowed, all the algorithms become more complicated because they must check to see whether a cell
@@ -104,6 +101,9 @@ public class UnorderedArray<T> {
      * looking at unoccupied cells.
      * A deletion requires searching through an average of N/2 elements and then moving the remaining elements
      * (an average of N/2 moves) to fill up the resulting hole.
+     * 
+     * Time complexity: O(n)
+     * Space complexity: O(1)
      * 
      * @param value element to be removed from this array, if present.
      * @return {@code true} if this array contained the specified element.

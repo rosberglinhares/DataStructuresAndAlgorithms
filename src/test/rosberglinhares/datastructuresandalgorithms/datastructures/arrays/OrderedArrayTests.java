@@ -32,36 +32,50 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
 
 /**
- * Test cases for the {@link rosberglinhares.datastructuresandalgorithms.datastructures.arrays.UnorderedArray} class.
+ * Test cases for the {@link rosberglinhares.datastructuresandalgorithms.datastructures.arrays.OrderedArray} class.
  */
-class UnorderedArrayTests {
+class OrderedArrayTests {
 
     /**
-     * Test method for {@link rosberglinhares.datastructuresandalgorithms.datastructures.arrays.UnorderedArray#insert(java.lang.Object) UnorderedArray.insert(T)}.
+     * Test method for {@link rosberglinhares.datastructuresandalgorithms.datastructures.arrays.OrderedArray#insert(java.lang.Comparable)}.
      * When insert random elements, these elements should be correctly stored.
      */
     @Test
     void insert_RandomElements_CorrectlyStored() {
-        UnorderedArray<Integer> array = new UnorderedArray<Integer>(4);
+        OrderedArray<Integer> array = new OrderedArray<Integer>(11);
         
-        array.insert(7);
-        array.insert(9);
-        array.insert(3);
-        array.insert(11);
+        array.insert(51);
+        array.insert(5);
+        array.insert(8);
+        array.insert(46);
+        array.insert(40);
+        array.insert(2);
+        array.insert(55);
+        array.insert(20);
+        array.insert(28);
+        array.insert(36);
+        array.insert(32);
         
-        assertEquals(11, array.get(3));
-        assertEquals(3, array.get(2));
-        assertEquals(9, array.get(1));
-        assertEquals(7, array.get(0));
+        assertEquals(2, array.get(0));
+        assertEquals(5, array.get(1));
+        assertEquals(8, array.get(2));
+        assertEquals(20, array.get(3));
+        assertEquals(28, array.get(4));
+        assertEquals(32, array.get(5));
+        assertEquals(36, array.get(6));
+        assertEquals(40, array.get(7));
+        assertEquals(46, array.get(8));
+        assertEquals(51, array.get(9));
+        assertEquals(55, array.get(10));
     }
-    
+
     /**
-     * Test method for {@link rosberglinhares.datastructuresandalgorithms.datastructures.arrays.UnorderedArray#insert(java.lang.Object) UnorderedArray.insert(T)}.
+     * Test method for {@link rosberglinhares.datastructuresandalgorithms.datastructures.arrays.OrderedArray#insert(java.lang.Comparable)}.
      * When try to insert more elements than the capacity, an exception should be be thrown.
-     */
+     */ 
     @Test
     void insert_ElementsCountGreaterThanSize_ExceptionThrown() {
-        UnorderedArray<Integer> array = new UnorderedArray<Integer>(4);
+        OrderedArray<Integer> array = new OrderedArray<Integer>(4);
         
         array.insert(7);
         array.insert(9);
@@ -74,12 +88,12 @@ class UnorderedArrayTests {
     }
     
     /**
-     * Test method for {@link rosberglinhares.datastructuresandalgorithms.datastructures.arrays.UnorderedArray#insert(java.lang.Object) UnorderedArray.insert(T)}.
+     * Test method for {@link rosberglinhares.datastructuresandalgorithms.datastructures.arrays.OrderedArray#insert(java.lang.Comparable)}.
      * When insert random elements, the size should be correctly updated.
      */
     @Test
     void insert_RandomElements_SizeCorrectlyUpdated() {
-        UnorderedArray<Integer> array = new UnorderedArray<Integer>(10);
+        OrderedArray<Integer> array = new OrderedArray<Integer>(10);
         
         assertEquals(0, array.size());
         
@@ -93,63 +107,83 @@ class UnorderedArrayTests {
     }
     
     /**
-     * Test method for {@link rosberglinhares.datastructuresandalgorithms.datastructures.arrays.UnorderedArray#search(java.lang.Object) UnorderedArray.search(T)}.
+     * Test method for {@link rosberglinhares.datastructuresandalgorithms.datastructures.arrays.OrderedArray#binarySearch(java.lang.Comparable)}.
      */
     @Test
-    void search() {
-        UnorderedArray<Integer> array = new UnorderedArray<Integer>(5);
+    void binarySearch() {
+        OrderedArray<Integer> array = new OrderedArray<Integer>(20);
         
-        assertFalse(array.search(200) >= 0);
+        assertFalse(array.binarySearch(200));
         
-        array.insert(7);
-        array.insert(9);
-        array.insert(3);
-        array.insert(11);
+        array.insert(51);
+        array.insert(5);
         array.insert(8);
+        array.insert(46);
+        array.insert(40);
+        array.insert(2);
+        array.insert(55);
+        array.insert(20);
+        array.insert(28);
+        array.insert(36);
+        array.insert(32);
         
-        assertFalse(array.search(15) >= 0);
-        assertTrue(array.search(3) >= 0);
-        assertTrue(array.search(7) >= 0);
-        assertTrue(array.search(8) >= 0);
+        assertFalse(array.binarySearch(200));
+        assertFalse(array.binarySearch(6));
+        assertTrue(array.binarySearch(55));
+        assertTrue(array.binarySearch(2));
+        assertTrue(array.binarySearch(32));
+        assertTrue(array.binarySearch(28));
         
-        array.delete(9);
-        array.delete(11);
+        array.delete(2);
+        array.delete(32);
         
-        assertFalse(array.search(9) >= 0);
-        assertTrue(array.search(3) >= 0);
+        assertFalse(array.binarySearch(2));
+        assertFalse(array.binarySearch(32));
+        assertTrue(array.binarySearch(55));
+        assertTrue(array.binarySearch(28));
     }
     
     /**
-     * Test method for {@link rosberglinhares.datastructuresandalgorithms.datastructures.arrays.UnorderedArray#delete(java.lang.Object) UnorderedArray.delete(T)}.
+     * Test method for {@link rosberglinhares.datastructuresandalgorithms.datastructures.arrays.OrderedArray#delete(java.lang.Comparable)}.
      * When insert and delete random elements, the remaining elements should be correctly stored.
      */
     @Test
     void delete_RandomElements_CorrectlyStored() {
-        UnorderedArray<Integer> array = new UnorderedArray<Integer>(6);
+        OrderedArray<Integer> array = new OrderedArray<Integer>(11);
         
-        array.insert(7);
-        array.insert(9);
-        array.insert(3);
-        array.insert(11);
+        array.insert(51);
+        array.insert(5);
         array.insert(8);
-        array.insert(4);
+        array.insert(46);
+        array.insert(40);
+        array.insert(2);
+        array.insert(55);
+        array.insert(20);
+        array.insert(28);
+        array.insert(36);
+        array.insert(32);
         
-        array.delete(7);
-        array.delete(3);
-        array.delete(4);
+        array.delete(55);
+        array.delete(2);
+        array.delete(46);
+        array.delete(8);
         
-        assertEquals(9, array.get(0));
-        assertEquals(11, array.get(1));
-        assertEquals(8, array.get(2));
+        assertEquals(5, array.get(0));
+        assertEquals(20, array.get(1));
+        assertEquals(28, array.get(2));
+        assertEquals(32, array.get(3));
+        assertEquals(36, array.get(4));
+        assertEquals(40, array.get(5));
+        assertEquals(51, array.get(6));
     }
     
     /**
-     * Test method for {@link rosberglinhares.datastructuresandalgorithms.datastructures.arrays.UnorderedArray#delete(java.lang.Object) UnorderedArray.delete(T)}.
+     * Test method for {@link rosberglinhares.datastructuresandalgorithms.datastructures.arrays.OrderedArray#delete(java.lang.Comparable)}.
      * The array must return the correct value if the element to be deleted exists or not.
      */
     @Test
     void delete_RandomElements_ShouldReturnCorrectlyIfElementExists() {
-        UnorderedArray<Integer> array = new UnorderedArray<Integer>(6);
+        OrderedArray<Integer> array = new OrderedArray<Integer>(6);
         
         assertFalse(array.delete(9)); 
         
@@ -166,12 +200,12 @@ class UnorderedArrayTests {
     }
     
     /**
-     * Test method for {@link rosberglinhares.datastructuresandalgorithms.datastructures.arrays.UnorderedArray#delete(java.lang.Object) UnorderedArray.delete(T)}.
+     * Test method for {@link rosberglinhares.datastructuresandalgorithms.datastructures.arrays.OrderedArray#delete(java.lang.Comparable)}.
      * When delete random elements, the size should be correctly updated.
      */
     @Test
     void delete_RandomElements_SizeCorrectlyUpdated() {
-        UnorderedArray<Integer> array = new UnorderedArray<Integer>(5);
+        OrderedArray<Integer> array = new OrderedArray<Integer>(5);
         
         array.insert(7);
         array.insert(9);
