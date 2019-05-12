@@ -32,7 +32,7 @@ public class BinarySearch {
     /**
      * Executes an iterative binary search.
      * 
-     * Time complexity: O(log(n))
+     * Time complexity: O(log N)
      * Space complexity: O(1)
      * 
      * @param <T> the type of elements in the array. For the ordering to work, these elements must be
@@ -64,8 +64,8 @@ public class BinarySearch {
     /**
      * Executes a recursive binary search.
      *
-     * Time complexity: O(log(n))
-     * Space complexity: O(log(n))
+     * Time complexity: O(log N)
+     * Space complexity: O(log N)
      * 
      * @param <T> the type of elements in the array. For the ordering to work, these elements must be
      *            {@link java.lang.Comparable} to themselves.

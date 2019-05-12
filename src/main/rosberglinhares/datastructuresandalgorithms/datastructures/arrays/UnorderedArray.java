@@ -77,7 +77,7 @@ public class UnorderedArray<T> {
      * If N is the number of items, the average number of steps needed to find an item is N/2. In the worst-case scenario,
      * the specified item is in the last occupied cell, and N steps will be required to find it.
      * 
-     * Time complexity: O(n)
+     * Time complexity: O(N)
      * Space complexity: O(1)
      * 
      * @param value the element to be searched.
@@ -102,7 +102,7 @@ public class UnorderedArray<T> {
      * A deletion requires searching through an average of N/2 elements and then moving the remaining elements
      * (an average of N/2 moves) to fill up the resulting hole.
      * 
-     * Time complexity: O(n)
+     * Time complexity: O(N)
      * Space complexity: O(1)
      * 
      * @param value element to be removed from this array, if present.

@@ -31,7 +31,10 @@ import rosberglinhares.datastructuresandalgorithms.algorithms.searching.BinarySe
  * 
  * The payoff for using an ordered array comes when we use a binary search. This kind of search is much faster than
  * a linear search, especially for large arrays.
- *
+ * The disadvantage is that insertion takes longer because all the data items with a higher key value must be moved up
+ * to make room. Deletions are slow in both ordered and unordered arrays because items must be moved down to fill the
+ * hole left by the deleted item.
+ * 
  * @param <T> the type of elements in this array. For the ordering to work, these elements must be
  *            {@link java.lang.Comparable} to themselves.
  */
@@ -62,7 +65,7 @@ public class OrderedArray<T extends Comparable<T>> {
      * But the speed penalty may not be important because an average of half the items must be moved anyway when
      * an insertion is performed, so insertion will not be very fast even if we locate the item with a binary search.
      * 
-     * Time complexity: O(n)
+     * Time complexity: O(N)
      * Space complexity: O(1)
      */
     public void insert(T value) {
@@ -92,7 +95,7 @@ public class OrderedArray<T extends Comparable<T>> {
     /**
      * Searches for a specified item by repeatedly dividing in half the range of array elements to be considered.
      * 
-     * Time complexity: O(log(n))
+     * Time complexity: O(log N)
      * Space complexity: O(1)
      */
     public boolean binarySearch(T value) {
@@ -106,7 +109,7 @@ public class OrderedArray<T extends Comparable<T>> {
      * numbers down to fill in the hole left by the deletion. In the ordered array, however, the deletion algorithm can
      * quit partway through if it doesn’t find the item, just as the search routine can.
      * 
-     * Time complexity: O(n)
+     * Time complexity: O(N)
      * Space complexity: O(1)
      * 
      * @param value element to be removed from this array, if present.
