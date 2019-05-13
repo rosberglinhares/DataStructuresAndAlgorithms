@@ -35,7 +35,7 @@ public class BinarySearch {
      * Time complexity: O(log N)
      * Space complexity: O(1)
      * 
-     * @param <T> the type of elements in the array. For the ordering to work, these elements must be
+     * @param <T> the type of elements in the array. In order for the search to work, these elements must be
      *            {@link java.lang.Comparable} to themselves.
      * @param elements a sorted array containing the elements to search.
      * @param value the value to search.
@@ -67,7 +67,7 @@ public class BinarySearch {
      * Time complexity: O(log N)
      * Space complexity: O(log N)
      * 
-     * @param <T> the type of elements in the array. For the ordering to work, these elements must be
+     * @param <T> the type of elements in the array. In order for the search to work, these elements must be
      *            {@link java.lang.Comparable} to themselves.
      * @param elements a sorted array containing the elements to search.
      * @param value the value to search.

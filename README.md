@@ -71,5 +71,15 @@ Core data structures and algorithms implemented in Java from scratch, very usefu
             <td align="center">O(log N)</td>
             <td align="center">O(log N)</td>
         </tr>
+        <tr>
+            <td>Iterative Bubble Sort</td>
+            <td align="center">O(N²)</td>
+            <td align="center">O(1)</td>
+        </tr>
+        <tr>
+            <td>Recursive Bubble Sort</td>
+            <td align="center">O(N²)</td>
+            <td align="center">O(N)</td>
+        </tr>
     </tbody>
     </table>

@@ -26,7 +26,13 @@ package rosberglinhares.datastructuresandalgorithms.datastructures.arrays;
 
 /**
  * Implements an unordered array.
- *
+ * 
+ * The main problem with arrays is that their size is fixed when they are first created with {@code new}.
+ * Usually, when the program first starts, you don’t know exactly how many items will be placed in the array later,
+ * so you guess how big it should be. If your guess is too large, you’ll waste memory by having cells in the array
+ * that are never filled. If your guess is too small, you’ll overflow the array, causing at best a message to the
+ * program’s user, and at worst a program crash.
+ * 
  * @param <T> the type of elements in this array.
  */
 public class UnorderedArray<T> {
