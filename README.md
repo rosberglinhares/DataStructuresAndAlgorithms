@@ -62,7 +62,7 @@ Content Overview:
                 <td align="center">O(1)</td>
             </tr>
             <tr>
-                <td rowspan="3" align="center">Stacks and Queues</td>
+                <td rowspan="6" align="center">Stacks and Queues</td>
                 <td rowspan="3" align="center">Stack (array)</td>
                 <td align="center">Push</td>
                 <td align="center">O(1)</td>
@@ -74,8 +74,24 @@ Content Overview:
                 <td align="center">O(1)</td>
             </tr>
             <tr>
-                <td align="center">Peek</td>
+                <td align="center">Size</td>
                 <td align="center">O(1)</td>
+                <td align="center">O(1)</td>
+            </tr>
+            <tr>
+                <td rowspan="3" align="center">Stack (linked list)</td>
+                <td align="center">Push</td>
+                <td align="center">O(1)</td>
+                <td align="center">O(1)</td>
+            </tr>
+            <tr>
+                <td align="center">Pop</td>
+                <td align="center">O(1)</td>
+                <td align="center">O(1)</td>
+            </tr>
+            <tr>
+                <td align="center">Size</td>
+                <td align="center">O(N)</td>
                 <td align="center">O(1)</td>
             </tr>
         </tbody>

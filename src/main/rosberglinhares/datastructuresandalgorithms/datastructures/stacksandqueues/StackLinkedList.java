@@ -25,18 +25,32 @@
 package rosberglinhares.datastructuresandalgorithms.datastructures.stacksandqueues;
 
 /**
- * Implements a stack using array.
+ * Implements a stack using linked list.
  */
-public class StackArray<T> implements Stack<T> {
-
-    private T[] elements;
-    private int top;
+public class StackLinkedList<T> implements Stack<T> {
     
-    @SuppressWarnings("unchecked")
-    public StackArray(int maxSize) {
-        this.elements = (T[])new Object[maxSize];
-        this.top = -1;
+    private static class Node<T> {
+        private T data;
+        private Node<T> next;
+        
+        public T getData() {
+            return this.data;
+        }
+        
+        public Node<T> getNext() {
+            return this.next;
+        }
+
+        public void setNext(Node<T> next) {
+            this.next = next;
+        }
+        
+        public Node(T data) {
+            this.data = data;
+        }
     }
+    
+    private Node<T> top;
     
     /**
      * Time complexity: O(1)
@@ -44,71 +58,62 @@ public class StackArray<T> implements Stack<T> {
      */
     @Override
     public boolean isEmpty() {
-        return (this.top == -1);
+        return (this.top == null);
     }
     
     /**
-     * Time complexity: O(1)
+     * Time complexity: O(N)
      * Space complexity: O(1)
      */
     @Override
     public int size() {
-        return this.top + 1;
+        int size = 0;
+        Node<T> currentNode = this.top;
+        
+        while (currentNode != null) {
+            currentNode = currentNode.getNext();
+            size++;
+        }
+        
+        return size;
     }
     
     /**
      * Time complexity: O(1)
      * Space complexity: O(1)
      */
-    public boolean isFull() {
-        return (this.size() == this.elements.length);
-    }
-    
-    /**
-     * Increments top so it points to the space just above the previous top and stores a data item there.
-     * 
-     * Time complexity: O(1)
-     * Space complexity: O(1) 
-     */
     @Override
     public void push(T element) {
-        if (!this.isFull()) {
-            this.top++;
-            this.elements[this.top] = element;
-        } else {
-            throw new UnsupportedOperationException();
-        }
+        Node<T> node = new Node<T>(element);
+        node.setNext(this.top);
+        
+        this.top = node;
     }
     
     /**
-     * Returns the value at top and then decrements top. This effectively removes the item from the stack;
-     * it’s inaccessible, although the value remains in the array (until another item is pushed into the cell).
-     * 
      * Time complexity: O(1)
-     * Space complexity: O(1) 
+     * Space complexity: O(1)
      */
     @Override
     public T pop() {
         if (!this.isEmpty()) {
-            T element = this.elements[this.top];
-            this.top--;
+            T element = this.top.getData();
+            this.top = this.top.getNext();
             
             return element;
         } else {
             throw new UnsupportedOperationException();
         }
     }
-    
+
     /**
-     * Simply returns the value at top, without changing the stack.
-     * 
      * Time complexity: O(1)
      * Space complexity: O(1)
      */
     @Override
     public T peek() {
         if (!this.isEmpty()) {
-            return this.elements[this.top];
+            return this.top.getData();
         } else {
             throw new UnsupportedOperationException();
         }
