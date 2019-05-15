@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://repository-images.githubusercontent.com/185307329/8e8a9a00-769a-11e9-8ea6-5be73f8a7000" width="300" alt="Logo" />
+</p>
+
 Core Data Structures and Algorithms Implementation
 ==================================================
 
@@ -22,7 +26,7 @@ Content Overview:
         </thead>
         <tbody>
             <tr>
-                <td rowspan=3>Unordered Array</td>
+                <td rowspan="3" align="center">Unordered Array</td>
                 <td align="center">Linear search</td>
                 <td align="center">O(N)</td>
                 <td align="center">O(1)</td>
@@ -38,7 +42,7 @@ Content Overview:
                 <td align="center">O(1)</td>
             </tr>
             <tr>
-                <td rowspan=3>Ordered Array</td>
+                <td rowspan="3" align="center">Ordered Array</td>
                 <td align="center">Binary search</td>
                 <td align="center">O(log N)</td>
                 <td align="center">O(1)</td>
@@ -61,6 +65,7 @@ Content Overview:
     <table>
     <thead>
         <tr>
+            <th align="center">Category</th>
             <th align="center">Algorithm</th>
             <th align="center">Time Complexity</th>
             <th align="center">Space Complexity</th>
@@ -68,6 +73,7 @@ Content Overview:
     </thead>
     <tbody>
         <tr>
+            <td rowspan="2" align="center">Searching</td>
             <td>Iterative Binary Search</td>
             <td align="center">O(log N)</td>
             <td align="center">O(1)</td>
@@ -78,6 +84,7 @@ Content Overview:
             <td align="center">O(log N)</td>
         </tr>
         <tr>
+            <td rowspan="6" align="center">Sorting</td>
             <td>Iterative Bubble Sort</td>
             <td align="center">O(N²)</td>
             <td align="center">O(1)</td>
@@ -94,6 +101,16 @@ Content Overview:
         </tr>
         <tr>
             <td>Recursive Selection Sort</td>
+            <td align="center">O(N²)</td>
+            <td align="center">O(N)</td>
+        </tr>
+        <tr>
+            <td>Iterative Insertion Sort</td>
+            <td align="center">O(N²)</td>
+            <td align="center">O(1)</td>
+        </tr>
+        <tr>
+            <td>Recursive Insertion Sort</td>
             <td align="center">O(N²)</td>
             <td align="center">O(N)</td>
         </tr>

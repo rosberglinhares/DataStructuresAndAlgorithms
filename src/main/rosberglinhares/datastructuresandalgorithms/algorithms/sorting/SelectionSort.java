@@ -81,7 +81,7 @@ public class SelectionSort {
      * @param items an array containing the elements to sort.
      */
     public <T extends Comparable<T>> void recursiveSelectionSort(T[] items) {
-        recursiveSelectionSort(items, 0);
+        this.recursiveSelectionSort(items, 0);
     }
     
     private <T extends Comparable<T>> void recursiveSelectionSort(T[] items, int lowerIndex) {
