@@ -5,7 +5,7 @@
 Core Data Structures and Algorithms Implementation
 ==================================================
 
-Core data structures and algorithms implemented in Java from scratch, very useful to crack the coding interviews at top tech companies. The theoretical part of this project is based on the following books:
+Core data structures and algorithms implemented in Java from scratch. Very useful to crack the coding interviews at top tech companies. The theoretical part of this project is based on the following books:
 
 * [Cracking the Coding Interview: 189 Programming Questions and Solutions (6th Edition)](https://www.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/0984782850/)
 * [Data Structures and Algorithms in Java (2nd Edition)](https://www.amazon.com/Data-Structures-Algorithms-Java-2nd/dp/0672324539/)
@@ -14,10 +14,13 @@ Content Overview:
 -----------------
 
 * ## Data Structures
+
   * ### Big O
+  
     <table>
         <thead>
             <tr>
+                <th align="center">Category</th>
                 <th align="center">Data Structure</th>
                 <th align="center">Operation</th>
                 <th align="center">Time Complexity</th>
@@ -26,6 +29,7 @@ Content Overview:
         </thead>
         <tbody>
             <tr>
+                <td rowspan="6" align="center">Arrays</td>
                 <td rowspan="3" align="center">Unordered Array</td>
                 <td align="center">Linear search</td>
                 <td align="center">O(N)</td>
@@ -57,11 +61,30 @@ Content Overview:
                 <td align="center">O(N)</td>
                 <td align="center">O(1)</td>
             </tr>
+            <tr>
+                <td rowspan="3" align="center">Stacks and Queues</td>
+                <td rowspan="3" align="center">Stack (array)</td>
+                <td align="center">Push</td>
+                <td align="center">O(1)</td>
+                <td align="center">O(1)</td>
+            </tr>
+            <tr>
+                <td align="center">Pop</td>
+                <td align="center">O(1)</td>
+                <td align="center">O(1)</td>
+            </tr>
+            <tr>
+                <td align="center">Peek</td>
+                <td align="center">O(1)</td>
+                <td align="center">O(1)</td>
+            </tr>
         </tbody>
     </table>
     
 * ## Algorithms
+
   * ### Big O
+  
     <table>
     <thead>
         <tr>
