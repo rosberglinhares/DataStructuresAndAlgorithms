@@ -32,12 +32,12 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
 
 /**
- * Test cases for the {@link rosberglinhares.datastructuresandalgorithms.datastructures.arrays.OrderedArray} class.
+ * Test cases for the {@link OrderedArray} class.
  */
 class OrderedArrayTests {
 
     /**
-     * Test method for {@link rosberglinhares.datastructuresandalgorithms.datastructures.arrays.OrderedArray#insert(java.lang.Comparable)}.
+     * Test method for {@link OrderedArray#insert(java.lang.Comparable)}.
      * When insert random elements, these elements should be correctly stored.
      */
     @Test
@@ -70,7 +70,7 @@ class OrderedArrayTests {
     }
 
     /**
-     * Test method for {@link rosberglinhares.datastructuresandalgorithms.datastructures.arrays.OrderedArray#insert(java.lang.Comparable)}.
+     * Test method for {@link OrderedArray#insert(java.lang.Comparable)}.
      * When try to insert more elements than the capacity, an exception should be be thrown.
      */ 
     @Test
@@ -88,7 +88,7 @@ class OrderedArrayTests {
     }
     
     /**
-     * Test method for {@link rosberglinhares.datastructuresandalgorithms.datastructures.arrays.OrderedArray#insert(java.lang.Comparable)}.
+     * Test method for {@link OrderedArray#insert(java.lang.Comparable)}.
      * When insert random elements, the size should be correctly updated.
      */
     @Test
@@ -107,7 +107,7 @@ class OrderedArrayTests {
     }
     
     /**
-     * Test method for {@link rosberglinhares.datastructuresandalgorithms.datastructures.arrays.OrderedArray#binarySearch(java.lang.Comparable)}.
+     * Test method for {@link OrderedArray#binarySearch(java.lang.Comparable)}.
      */
     @Test
     void binarySearch() {
@@ -144,7 +144,7 @@ class OrderedArrayTests {
     }
     
     /**
-     * Test method for {@link rosberglinhares.datastructuresandalgorithms.datastructures.arrays.OrderedArray#delete(java.lang.Comparable)}.
+     * Test method for {@link OrderedArray#delete(java.lang.Comparable)}.
      * When insert and delete random elements, the remaining elements should be correctly stored.
      */
     @Test
@@ -178,7 +178,7 @@ class OrderedArrayTests {
     }
     
     /**
-     * Test method for {@link rosberglinhares.datastructuresandalgorithms.datastructures.arrays.OrderedArray#delete(java.lang.Comparable)}.
+     * Test method for {@link OrderedArray#delete(java.lang.Comparable)}.
      * The array must return the correct value if the element to be deleted exists or not.
      */
     @Test
@@ -200,7 +200,7 @@ class OrderedArrayTests {
     }
     
     /**
-     * Test method for {@link rosberglinhares.datastructuresandalgorithms.datastructures.arrays.OrderedArray#delete(java.lang.Comparable)}.
+     * Test method for {@link OrderedArray#delete(java.lang.Comparable)}.
      * When delete random elements, the size should be correctly updated.
      */
     @Test

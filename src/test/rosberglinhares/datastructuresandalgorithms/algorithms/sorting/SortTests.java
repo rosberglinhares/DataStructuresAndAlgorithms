@@ -34,15 +34,15 @@ import org.junit.jupiter.api.Test;
  * Test cases for the following classes:
  * 
  * <ul>
- *     <li>{@link rosberglinhares.datastructuresandalgorithms.algorithms.sorting.BubbleSort}</li>
- *     <li>{@link rosberglinhares.datastructuresandalgorithms.algorithms.sorting.SelectionSort}</li>
- *     <li>{@link rosberglinhares.datastructuresandalgorithms.algorithms.sorting.InsertionSort}</li>
+ *     <li>{@link BubbleSort}</li>
+ *     <li>{@link SelectionSort}</li>
+ *     <li>{@link InsertionSort}</li>
  * </ul>
  */
 class SortTests {
 
     /**
-     * Test method for {@link rosberglinhares.datastructuresandalgorithms.algorithms.sorting.BubbleSort#iterativeBubbleSort(java.lang.Comparable[])}.
+     * Test method for {@link BubbleSort#iterativeBubbleSort(java.lang.Comparable[])}.
      */
     @Test
     void iterativeBubbleSort_EmptyArray_ShouldReturnEmptyArray() {
@@ -52,7 +52,7 @@ class SortTests {
     }
     
     /**
-     * Test method for {@link rosberglinhares.datastructuresandalgorithms.algorithms.sorting.BubbleSort#iterativeBubbleSort(java.lang.Comparable[])}.
+     * Test method for {@link BubbleSort#iterativeBubbleSort(java.lang.Comparable[])}.
      */
     @Test
     void iterativeBubbleSort_RandomElements_CorrectlySorted() {
@@ -62,7 +62,7 @@ class SortTests {
     }
     
     /**
-     * Test method for {@link rosberglinhares.datastructuresandalgorithms.algorithms.sorting.BubbleSort#recursiveBubbleSort(java.lang.Comparable[])}.
+     * Test method for {@link BubbleSort#recursiveBubbleSort(java.lang.Comparable[])}.
      */
     @Test
     void recursiveBubbleSort_EmptyArray_ShouldReturnEmptyArray() {
@@ -72,7 +72,7 @@ class SortTests {
     }
     
     /**
-     * Test method for {@link rosberglinhares.datastructuresandalgorithms.algorithms.sorting.BubbleSort#recursiveBubbleSort(java.lang.Comparable[])}.
+     * Test method for {@link BubbleSort#recursiveBubbleSort(java.lang.Comparable[])}.
      */
     @Test
     void recursiveBubbleSort_RandomElements_CorrectlySorted() {
@@ -82,7 +82,7 @@ class SortTests {
     }
     
     /**
-     * Test method for {@link rosberglinhares.datastructuresandalgorithms.algorithms.sorting.SelectionSort#iterativeSelectionSort(java.lang.Comparable[])}.
+     * Test method for {@link SelectionSort#iterativeSelectionSort(java.lang.Comparable[])}.
      */
     @Test
     void iterativeSelectionSort_EmptyArray_ShouldReturnEmptyArray() {
@@ -92,7 +92,7 @@ class SortTests {
     }
     
     /**
-     * Test method for {@link rosberglinhares.datastructuresandalgorithms.algorithms.sorting.SelectionSort#iterativeSelectionSort(java.lang.Comparable[])}.
+     * Test method for {@link SelectionSort#iterativeSelectionSort(java.lang.Comparable[])}.
      */
     @Test
     void iterativeSelectionSort_RandomElements_CorrectlySorted() {
@@ -102,7 +102,7 @@ class SortTests {
     }
 
     /**
-     * Test method for {@link rosberglinhares.datastructuresandalgorithms.algorithms.sorting.SelectionSort#recursiveSelectionSort(java.lang.Comparable[])}.
+     * Test method for {@link SelectionSort#recursiveSelectionSort(java.lang.Comparable[])}.
      */
     @Test
     void recursiveSelectionSort_EmptyArray_ShouldReturnEmptyArray() {
@@ -112,7 +112,7 @@ class SortTests {
     }
     
     /**
-     * Test method for {@link rosberglinhares.datastructuresandalgorithms.algorithms.sorting.SelectionSort#recursiveSelectionSort(java.lang.Comparable[])}.
+     * Test method for {@link SelectionSort#recursiveSelectionSort(java.lang.Comparable[])}.
      */
     @Test
     void recursiveSelectionSort_RandomElements_CorrectlySorted() {
@@ -122,7 +122,7 @@ class SortTests {
     }
     
     /**
-     * Test method for {@link rosberglinhares.datastructuresandalgorithms.algorithms.sorting.InsertionSort#iterativeInsertionSort(java.lang.Comparable[])}.
+     * Test method for {@link InsertionSort#iterativeInsertionSort(java.lang.Comparable[])}.
      */
     @Test
     void iterativeInsertionSort_EmptyArray_ShouldReturnEmptyArray() {
@@ -132,7 +132,7 @@ class SortTests {
     }
     
     /**
-     * Test method for {@link rosberglinhares.datastructuresandalgorithms.algorithms.sorting.InsertionSort#iterativeInsertionSort(java.lang.Comparable[])}.
+     * Test method for {@link InsertionSort#iterativeInsertionSort(java.lang.Comparable[])}.
      */
     @Test
     void iterativeInsertionSort_RandomElements_CorrectlySorted() {
@@ -142,7 +142,7 @@ class SortTests {
     }
 
     /**
-     * Test method for {@link rosberglinhares.datastructuresandalgorithms.algorithms.sorting.InsertionSort#recursiveInsertionSort(java.lang.Comparable[])}.
+     * Test method for {@link InsertionSort#recursiveInsertionSort(java.lang.Comparable[])}.
      */
     @Test
     void recursiveInsertionSort_EmptyArray_ShouldReturnEmptyArray() {
@@ -152,7 +152,7 @@ class SortTests {
     }
     
     /**
-     * Test method for {@link rosberglinhares.datastructuresandalgorithms.algorithms.sorting.InsertionSort#recursiveInsertionSort(java.lang.Comparable[])}.
+     * Test method for {@link InsertionSort#recursiveInsertionSort(java.lang.Comparable[])}.
      */
     @Test
     void recursiveInsertionSort_RandomElements_CorrectlySorted() {

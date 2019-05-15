@@ -32,12 +32,12 @@ import java.util.function.BiPredicate;
 import org.junit.jupiter.api.Test;
 
 /**
- * Test cases for the {@link rosberglinhares.datastructuresandalgorithms.algorithms.searching.BinarySearch} class.
+ * Test cases for the {@link BinarySearch} class.
  */
 class BinarySearchTests {
 
     /**
-     * Test method for {@link rosberglinhares.datastructuresandalgorithms.algorithms.searching.BinarySearch#iterativeBinarySearch(java.lang.Comparable<T>[], java.lang.Comparable<T>)}.
+     * Test method for {@link BinarySearch#iterativeBinarySearch(java.lang.Comparable<T>[], java.lang.Comparable<T>)}.
      */
     @Test
     void iterativeBinarySearch() {
@@ -47,7 +47,7 @@ class BinarySearchTests {
     }
     
     /**
-     * Test method for {@link rosberglinhares.datastructuresandalgorithms.algorithms.searching.BinarySearch#iterativeBinarySearch(java.lang.Comparable<T>[], int, int, java.lang.Comparable<T>)}.
+     * Test method for {@link BinarySearch#iterativeBinarySearch(java.lang.Comparable<T>[], int, int, java.lang.Comparable<T>)}.
      */
     @Test
     void iterativeBinarySearchRange() {
@@ -66,7 +66,7 @@ class BinarySearchTests {
     }
     
     /**
-     * Test method for {@link rosberglinhares.datastructuresandalgorithms.algorithms.searching.BinarySearch#recursiveBinarySearch(java.lang.Comparable<T>[], java.lang.Comparable<T>)}.
+     * Test method for {@link BinarySearch#recursiveBinarySearch(java.lang.Comparable<T>[], java.lang.Comparable<T>)}.
      */
     @Test
     void recursiveBinarySearch() {

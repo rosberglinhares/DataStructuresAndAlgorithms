@@ -32,12 +32,12 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
 
 /**
- * Test cases for the {@link rosberglinhares.datastructuresandalgorithms.datastructures.arrays.UnorderedArray} class.
+ * Test cases for the {@link UnorderedArray} class.
  */
 class UnorderedArrayTests {
 
     /**
-     * Test method for {@link rosberglinhares.datastructuresandalgorithms.datastructures.arrays.UnorderedArray#insert(java.lang.Object) UnorderedArray.insert(T)}.
+     * Test method for {@link UnorderedArray#insert(java.lang.Object) UnorderedArray.insert(T)}.
      * When insert random elements, these elements should be correctly stored.
      */
     @Test
@@ -56,7 +56,7 @@ class UnorderedArrayTests {
     }
     
     /**
-     * Test method for {@link rosberglinhares.datastructuresandalgorithms.datastructures.arrays.UnorderedArray#insert(java.lang.Object) UnorderedArray.insert(T)}.
+     * Test method for {@link UnorderedArray#insert(java.lang.Object) UnorderedArray.insert(T)}.
      * When try to insert more elements than the capacity, an exception should be be thrown.
      */
     @Test
@@ -74,7 +74,7 @@ class UnorderedArrayTests {
     }
     
     /**
-     * Test method for {@link rosberglinhares.datastructuresandalgorithms.datastructures.arrays.UnorderedArray#insert(java.lang.Object) UnorderedArray.insert(T)}.
+     * Test method for {@link UnorderedArray#insert(java.lang.Object) UnorderedArray.insert(T)}.
      * When insert random elements, the size should be correctly updated.
      */
     @Test
@@ -93,7 +93,7 @@ class UnorderedArrayTests {
     }
     
     /**
-     * Test method for {@link rosberglinhares.datastructuresandalgorithms.datastructures.arrays.UnorderedArray#search(java.lang.Object) UnorderedArray.search(T)}.
+     * Test method for {@link UnorderedArray#search(java.lang.Object) UnorderedArray.search(T)}.
      */
     @Test
     void search() {
@@ -120,7 +120,7 @@ class UnorderedArrayTests {
     }
     
     /**
-     * Test method for {@link rosberglinhares.datastructuresandalgorithms.datastructures.arrays.UnorderedArray#delete(java.lang.Object) UnorderedArray.delete(T)}.
+     * Test method for {@link UnorderedArray#delete(java.lang.Object) UnorderedArray.delete(T)}.
      * When insert and delete random elements, the remaining elements should be correctly stored.
      */
     @Test
@@ -144,7 +144,7 @@ class UnorderedArrayTests {
     }
     
     /**
-     * Test method for {@link rosberglinhares.datastructuresandalgorithms.datastructures.arrays.UnorderedArray#delete(java.lang.Object) UnorderedArray.delete(T)}.
+     * Test method for {@link UnorderedArray#delete(java.lang.Object) UnorderedArray.delete(T)}.
      * The array must return the correct value if the element to be deleted exists or not.
      */
     @Test
@@ -166,7 +166,7 @@ class UnorderedArrayTests {
     }
     
     /**
-     * Test method for {@link rosberglinhares.datastructuresandalgorithms.datastructures.arrays.UnorderedArray#delete(java.lang.Object) UnorderedArray.delete(T)}.
+     * Test method for {@link UnorderedArray#delete(java.lang.Object) UnorderedArray.delete(T)}.
      * When delete random elements, the size should be correctly updated.
      */
     @Test
